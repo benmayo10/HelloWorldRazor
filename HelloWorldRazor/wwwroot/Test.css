@@ -1,5 +1,7 @@
 ﻿p {
   color: #00ff00;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 body {
