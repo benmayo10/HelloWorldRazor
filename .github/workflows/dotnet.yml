@@ -27,8 +27,8 @@ jobs:
     - name: Create ZIP Archive
       uses: ihiroky/archive-action@v1
       with:
-        root_dir: .
-        base_dir: HelloWorldRazor/bin/Release/net6.0
+        root_dir: HelloWorldRazor/bin/Release/net6.0
+        base_dir: .
         file_path: HelloWorldRazor/bin/Release/net6.0_publish.zip
     - name: Upload Artifcat
       uses: actions/upload-artifact@v3.1.2
