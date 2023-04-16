@@ -24,3 +24,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Package
+      run: dotnet pack --configuration Release HelloWorldRazor
+    - name: Release
+      run: dotnet nuget push HelloWorldRazor/bin/Release/*.nupkg
