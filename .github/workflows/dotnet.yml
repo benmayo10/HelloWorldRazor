@@ -33,4 +33,5 @@ jobs:
     - name: Upload Artifcat
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: HelloWorldRazor/bin/Release/net6.0_publish.zip
+        name: HelloWorldRazor-Release
+        path: HelloWorldRazor/bin/Release/net6.0_publish.zip
