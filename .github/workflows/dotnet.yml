@@ -24,15 +24,13 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore --configuration Release
-    - name: Publish dotnet Build
-      run: dotnet publish --no-restore
     - name: Create ZIP Archive
       uses: ihiroky/archive-action@v1
       with:
         root_dir: .
         base_dir: HelloWorldRazor/bin/Release/net6.0
         file_path: HelloWorldRazor/bin/Release/net6.0_publish.zip
-    - name: Download ZIP
-      uses: actions/download-artifact@v2.1.1
+    - name: Upload Artifcat
+      uses: actions/upload-artifact@v3.1.2
       with:
         name: HelloWorldRazor/bin/Release/net6.0_publish.zip
